@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg2">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/opa_white_25"></RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/relLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_centerHorizontal="true">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registration"
+                android:textColor="@color/opa_black_50"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold"
+                />
+
+
+        </RelativeLayout>
+
+
+
+        <EditText
+            android:id="@+id/edtUserName"
+            style="@style/Main.EditText.Style"
+            android:hint="Username"
+            android:layout_below="@+id/relLogo"
+            android:layout_marginTop="@dimen/_45sdp"
+            />
+
+
+        <EditText
+            android:id="@+id/edtFName"
+            style="@style/Main.EditText.Style"
+            android:hint="First Name"
+            android:layout_below="@+id/edtUserName"
+            android:layout_marginTop="@dimen/_15sdp"
+            />
+
+
+        <EditText
+            android:id="@+id/edtLName"
+            style="@style/Main.EditText.Style"
+            android:hint="Last Name"
+            android:layout_below="@+id/edtFName"
+            android:layout_marginTop="@dimen/_15sdp"
+            />
+
+
+        <EditText
+            android:id="@+id/edtEmail"
+            style="@style/Main.EditText.Style"
+            android:hint="Email"
+            android:layout_below="@+id/edtLName"
+            android:layout_marginTop="@dimen/_15sdp"
+            />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputPass"
+            style="@style/Main.TextInput.Password"
+            app:passwordToggleEnabled="true"
+            android:hint="Password"
+            app:passwordToggleTint="@color/opa_black_80"
+            android:layout_below="@id/edtEmail"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edtPW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="@color/opa_black_80"
+                android:inputType="textPassword"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputConfirmPass"
+            style="@style/Main.TextInput.Password"
+            app:passwordToggleEnabled="true"
+            android:hint="Confirm Password"
+            app:passwordToggleTint="@color/opa_black_80"
+            android:layout_below="@id/textInputPass"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edtConfirmPW"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:textColor="@color/opa_black_80"
+                android:inputType="textPassword"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_gray"
+            android:layout_below="@+id/textInputConfirmPass"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_centerHorizontal="true"
+            android:text="REGISTER"
+            android:textColor="@color/opa_black_25"
+            android:textAlignment="center"
+            android:textSize="@dimen/_18sdp"
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
