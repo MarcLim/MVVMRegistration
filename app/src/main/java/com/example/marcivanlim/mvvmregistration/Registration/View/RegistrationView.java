@@ -8,6 +8,7 @@ import android.support.design.widget.TextInputEditText;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.marcivanlim.mvvmregistration.API.APIClientInterface;
 import com.example.marcivanlim.mvvmregistration.MainApplication;
 import com.example.marcivanlim.mvvmregistration.R;
 import com.example.marcivanlim.mvvmregistration.Registration.ViewModel.RegistrationInterface;
@@ -36,6 +37,7 @@ public class RegistrationView extends Activity {
 
     @Inject RegistrationInterface registrationInterface;
     @Inject UtilsInterface utilsInterface;
+    @Inject APIClientInterface apiClientInterface;
 
     CompositeDisposable compositeDisposable = new CompositeDisposable();
 
@@ -82,7 +84,7 @@ public class RegistrationView extends Activity {
     public void registerUser()
     {
         showLoading();
-        Disposable obsRegisterUser =  registrationInterface.registerUser(getApplicationContext(), utilsInterface, progressDialog);
+        Disposable obsRegisterUser =  registrationInterface.registerUser(getApplicationContext(), utilsInterface, progressDialog, apiClientInterface);
         compositeDisposable.add(obsRegisterUser);
     }
 
@@ -104,7 +106,6 @@ public class RegistrationView extends Activity {
 
     public void showLoading()
     {
-
         progressDialog = new ProgressDialog(RegistrationView.this);
         progressDialog.setIndeterminate(true);
         progressDialog.setCanceledOnTouchOutside(false);

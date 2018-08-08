@@ -11,10 +11,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by pc on 8/1/2018.
  */
 
-public class APIClient {
+public class APIClient implements APIClientInterface {
 
     private static Retrofit retrofit = null;
-    public static Retrofit getClient() {
+    public Retrofit getClient() {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);

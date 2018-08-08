@@ -17,7 +17,7 @@
 
 
         <activity
-            android:name=".Registration.View.RegistrationView"
+            android:name=".LiveData.NameActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

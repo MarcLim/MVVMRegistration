@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.marcivanlim.mvvmregistration.API.APIClient;
+import com.example.marcivanlim.mvvmregistration.API.APIClientInterface;
 import com.example.marcivanlim.mvvmregistration.API.APIInterface;
 import com.example.marcivanlim.mvvmregistration.R;
 import com.example.marcivanlim.mvvmregistration.Utils.UtilsInterface;
@@ -136,10 +137,10 @@ public class RegistrationViewModel implements RegistrationInterface {
 
 
 
-    public Disposable registerUser(final Context context, UtilsInterface utilsInterface, ProgressDialog progressDialog)
+    public Disposable registerUser(final Context context, UtilsInterface utilsInterface, ProgressDialog progressDialog, APIClientInterface apiClientInterface)
     {
 
-        APIInterface apiInterface = APIClient.getClient().create(APIInterface.class);
+        APIInterface apiInterface = apiClientInterface.getClient().create(APIInterface.class);
 
 
         Disposable disposable = apiInterface.registerUser("","","","","","")
